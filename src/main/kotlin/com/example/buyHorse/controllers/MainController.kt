@@ -29,8 +29,6 @@ class MainController(private val horseRepository: HorseRepository,
     @PostMapping(path = ["/addSeller"])
     fun addSeller(@RequestBody seller: Seller) = sellerRepository.save(seller)
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
     @GetMapping(path = ["/allHorses"])
     fun findAllHorses(): MutableIterable<Horse> = horseRepository.getAllHorses()
 
